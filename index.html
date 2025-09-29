@@ -13,19 +13,8 @@
 <meta name="authoring-tool" content="Adobe_Animate_CC">
 <title>quest_game</title>
 <!-- write your code here -->
-<style>
-  body {
-	overflow:hidden;
-  }
-  #animation_container {
-	position:absolute;
-	margin:auto;
-	left:-100%;right:-100%;
-	top:-100%;bottom:-100%;
-  }
-</style>
 <script src="https://code.createjs.com/1.0.0/createjs.min.js"></script>
-<script src="quest_game.js?1759166513439"></script>
+<script src="quest_game.js"></script>
 <script>
 var canvas, stage, exportRoot, anim_container, dom_overlay_container, fnStartAnimation;
 function init() {
@@ -49,7 +38,7 @@ function handleComplete(evt,comp) {
 		createjs.Ticker.addEventListener("tick", stage);
 	}	    
 	//Code to support hidpi screens and responsive scaling.
-	AdobeAn.makeResponsive(true,'both',true,2,[canvas,anim_container,dom_overlay_container]);	
+	AdobeAn.makeResponsive(true,'both',true,1,[canvas,anim_container,dom_overlay_container]);	
 	AdobeAn.compositionLoaded(lib.properties.id);
 	fnStartAnimation();
 }
